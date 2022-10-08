@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Рецепты</string>
+    <string name="descr_avatar">Аватар</string>
+    <string name="descr_menu">Меню</string>
+    <string name="favorit_button">В избранное</string>
+    <string name="remove">Удалить</string>
+    <string name="menu_edit">Изменить</string>
+    <string name="description_recipe_save">Сохранить</string>
+    <string name="hello_blank_fragment" translatable="false">Привет</string>
+    <string name="ToFavorites">В избранное</string>
+    <string name="Favorites">Избранное</string>
+    <string name="add_recipe">Добавить рецепт</string>
+    <string name="FavoritesLabel">В избранном</string>
+    <string name="all_recipes">Все рецепты</string>
+    <string-array name="categories">
+        <item>Европейская</item>
+        <item>Азиатская</item>
+        <item>Паназиатская</item>
+        <item>Восточная</item>
+        <item>Американская</item>
+        <item>Русская</item>
+        <item>Средиземноморская</item>
+    </string-array>
+    <string name="search_text">Поиск рецептов</string>
+    <string name="kitchen">"кухня"</string>
+    <string name="Choice_Category">Выбор категории</string>
+    <string name="button_title_ok">Ok</string>
+    <string name="recipe_editing">Редактирование…</string>
+    <string name="recipe_describe">Описание</string>
+    <string name="recipe_save">Сохранение рецепта</string>
+    <string name="editing_stage">Редактирование шага</string>
+    <string name="stage_num_title">Шаг №</string>
+    <string name="set_picture">Установить изображение</string>
+    <string name="emtyDescribe">Описание и шаги рецепта должны быть заполнены</string>
+    <string name="stage_empty">Описание шага не должно быть пустым</string>
+</resources>

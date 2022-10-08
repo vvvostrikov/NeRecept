@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/empty_povar"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_margin="@dimen/common_spacing"
+
+        android:src="@drawable/cartoon_cook"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@id/toggleButtonFavorit"
+        android:alpha="0.5"
+        />
+
+    <ImageView
+        android:id="@+id/top_avatar"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="@dimen/common_spacing"
+        android:layout_marginTop="@dimen/common_spacing"
+        android:contentDescription="@string/descr_avatar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/flomaster" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/author"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_spacing"
+        android:layout_marginEnd="@dimen/common_spacing"
+        android:textSize="@dimen/author_text_size"
+        android:ellipsize="end"
+        android:singleLine="true"
+
+        app:layout_constraintEnd_toStartOf="@id/dropdown_menu"
+        app:layout_constraintStart_toEndOf="@id/top_avatar"
+        app:layout_constraintTop_toTopOf="@id/top_avatar"
+        app:layout_constraintBottom_toBottomOf="@id/top_avatar"
+        tools:text="Имя автора рецепта" />
+
+
+    <ImageButton
+        android:id="@+id/dropdown_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/common_spacing"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/descr_menu"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/top_avatar"
+        app:srcCompat="@drawable/ic_baseline_more_vert_24" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/describe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_spacing"
+        android:layout_marginTop="12dp"
+        android:textStyle="bold"
+        android:ellipsize="end"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerBarrier"
+
+        tools:text="@tools:sample/lorem" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_spacing"
+        android:layout_marginTop="12dp"
+        android:textStyle="italic"
+        android:ellipsize="end"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/describe"
+
+        tools:text="@tools:sample/lorem" />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/kitchen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/foot_horiz_spacing"
+        android:layout_marginTop="12dp"
+        android:textStyle="italic"
+        android:ellipsize="end"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintStart_toEndOf="@id/category"
+        app:layout_constraintTop_toBottomOf="@id/describe"
+        android:text="@string/kitchen"
+        />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/headerBarrier"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="author,top_avatar" />
+
+    <ToggleButton
+        android:id="@+id/toggleButtonFavorit"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginTop="@dimen/common_spacing"
+        android:layout_marginEnd="@dimen/common_spacing"
+        android:checked="false"
+        android:textOff="@string/ToFavorites"
+        android:textOn="@string/FavoritesLabel"
+        android:textSize="11sp"
+
+        android:textColor="@color/red"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/describe"
+        app:layout_constraintBottom_toBottomOf="@id/category"
+
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        android:background="@color/peach"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toggleButtonFavorit"
+       app:layout_constraintBottom_toBottomOf="parent"
+        tools:listitem="@layout/stage"
+/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/feedFragment">
+
+    <fragment
+        android:id="@+id/feedFragment"
+        android:name="ru.netology.nerecipe.fragments.FeedFragment"
+        android:label="fragment_feed"
+        tools:layout="@layout/fragment_feed" >
+
+        <action
+            android:id="@+id/action_feedFragment_to_feedFavoritesFragment2"
+            app:destination="@id/feedFavoritesFragment" />
+        <action
+            android:id="@+id/action_feedFragment_to_categoryFeed"
+            app:destination="@id/categoryFeed" />
+        <action
+            android:id="@+id/action_feedFragment_to_singleRecipe2"
+            app:destination="@id/singleRecipe" />
+        <action
+            android:id="@+id/action_feedFragment_to_editRecipe"
+            app:destination="@id/editRecipe" />
+    </fragment>
+    <fragment
+        android:id="@+id/feedFavoritesFragment"
+        android:name="ru.netology.nerecipe.fragments.FeedFavoritesFragment"
+        android:label="fragment_favorites_feed"
+        tools:layout="@layout/fragment_favorites_feed" >
+        <action
+            android:id="@+id/action_feedFavoritesFragment_to_editRecipe"
+            app:destination="@id/editRecipe" />
+        <action
+            android:id="@+id/action_feedFavoritesFragment_to_singleRecipe"
+            app:destination="@id/singleRecipe" />
+        <action
+            android:id="@+id/action_feedFavoritesFragment_to_categoryFeed"
+            app:destination="@id/categoryFeed" />
+    </fragment>
+    <fragment
+        android:id="@+id/categoryFeed"
+        android:name="ru.netology.nerecipe.fragments.CategoryFeed"
+        android:label="fragment_category_feed"
+        tools:layout="@layout/fragment_category_feed" />
+    <fragment
+        android:id="@+id/singleRecipe"
+        android:name="ru.netology.nerecipe.fragments.SingleRecipeFragment"
+        android:label="SingleRecipe" >
+        <action
+            android:id="@+id/action_singleRecipe_to_editRecipe"
+            app:destination="@id/editRecipe" />
+    </fragment>
+    <fragment
+        android:id="@+id/editRecipe"
+        android:name="ru.netology.nerecipe.fragments.EditRecipe"
+        android:label="fragment_edit_recipe"
+        tools:layout="@layout/fragment_edit_recipe" >
+        <action
+            android:id="@+id/action_editRecipe_to_editStage"
+            app:destination="@id/editStage" />
+    </fragment>
+    <fragment
+        android:id="@+id/editStage"
+        android:name="ru.netology.nerecipe.fragments.EditStage"
+        android:label="EditStage" />
+</navigation>
